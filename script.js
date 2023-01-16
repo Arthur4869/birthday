@@ -6,7 +6,6 @@ var form = document.getElementById("form");
 var btn = document.getElementById("btn");
 var input = document.getElementById("input");
 var image = document.getElementById("imgWish");
-image.style.height = document.body.offsetHeight - 16 + 'px';
 var count = 0;
 
 function alignCake(){
