@@ -6,6 +6,7 @@ var form = document.getElementById("form");
 var btn = document.getElementById("btn");
 var input = document.getElementById("input");
 var image = document.getElementById("imgWish");
+var audio = document.getElementById("audio");
 var count = 0;
 
 function alignCake(){
@@ -31,6 +32,7 @@ cake.addEventListener("click", function(){
 btn.addEventListener('click', function(event){
     event.preventDefault();
     if(input.value == "0302"){
+        audio.play();
         form.style.display = "none";
         setTimeout(function(){
                 volatile.style.display="none";
@@ -42,18 +44,10 @@ btn.addEventListener('click', function(event){
             gate1.style.animation = "rotRight 0.5s ease-in-out";
             gate2.style.animation = "rotLeft 0.5s ease-in-out";
     }
-    else if(count == 0){
-        alert("Invalid Password");
-        count++;
-    }
-    else if(count == 1){
-        alert("Invalid Password, what's the date today?");
-        count++;
-    }
     else{
-         alert("Invalid Password, Date and Month BAKA -_-");
+        alert("Invalid Password, Try Again : )");
         count++;
     }
-
-})
+    
+});
 
